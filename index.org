@@ -280,7 +280,16 @@ N	⟼	November
 *** Link
 - [[https://github.com/kkweon/keras-docset][Github]]
 
+** Identicon Generator
+#+BEGIN_EXPORT html
+<img src="https://github.com/kkweon/identicon-generator-in-elixir/blob/master/assets/Hello%20World.png?raw=true" />
+#+END_EXPORT
+*** Overview
+- Identicon refers to an image that is unique and can represent one's identity (Like UUID but in image format)
+- Used Elixir and Erlang library
 
+*** Link
+- [[https://github.com/kkweon/identicon-generator-in-elixir][Github]]
 ** Reddit Crawler in Haskell
 
 *** Overview
