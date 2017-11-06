@@ -80,7 +80,17 @@ span.copy-to-clipboard-button {
 - Segmented vehicles on a picture or a video frame with the IOU (Intersection of Union) of ~80%
 - Implemented the Convolutional Networks for Image Segmentation (U-Net) from scratch
 *** Link
-- Github: [[https://github.com/kkweon/UNet-in-Tensorflow][link]]
+- [[https://github.com/kkweon/UNet-in-Tensorflow][Github]]
+
+** Path Planning
+#+BEGIN_EXPORT html
+<img src="https://github.com/kkweon/sdc-path-planning/raw/master/assets/demo.gif?raw=true" />
+#+END_EXPORT
+*** Overview
+- Generates a path plan that can drive on the highway
+- Implemented an efficient(lane change if necessary) and safe trajectory
+*** Link
+- [[https://github.com/kkweon/sdc-path-planning][Github]]
 
 ** Vehicle Control with a Model Predictive Controller
 
