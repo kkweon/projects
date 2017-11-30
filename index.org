@@ -52,11 +52,11 @@ span.copy-to-clipboard-button {
 
 *** Overview
 - Implemented and compared multiple reinforcement learning algorithms using Tensorflow:
-  - DQN
-  - DDQN
-  - PAAC
-  - Policy Gradients
-  - A3C
+  - DQN (in [[https://github.com/kkweon/DQN-in-R][R]] and [[https://gist.github.com/kkweon/61fbb76822d9f5753dec2f8e86e86aac][Python]])
+  - [[https://github.com/hunkim/ReinforcementZeroToAll][DDQN]]
+  - [[https://github.com/kkweon/PAAC-in-Tensorflow][PAAC]]
+  - [[https://github.com/hunkim/ReinforcementZeroToAll/blob/master/08_4_softmax_pg_pong_y.py][Policy Gradients]]
+  - [[https://github.com/kkweon/A3C-Tensorflow][A3C]]
 
 ** Spending Visualization
 #+BEGIN_EXPORT html
