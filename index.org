@@ -164,6 +164,16 @@ span.copy-to-clipboard-button {
 - [[https://mango-commerce.herokuapp.com/][Demo]]
 - [[https://github.com/kkweon/Simple-App-in-Phoenix/tree/mango][Github]]
 
+** PR-12
+*** Overview
+PR-12 is the reading/study group organized in Tensorflow KR Facebook Group.
+The objective is to read/discuss deep learning papers every week hosted in Awesome Deep Learning Papers.
+
+*** Link
+- [[https://kkweon.github.io/pr12/][Demo]]
+- [[https://github.com/kkweon/pr12][Github]]
+
+
 ** Hue Control Dashboard
 #+BEGIN_EXPORT html
 <img src="https://i.imgur.com/K16phhV.jpg" />
