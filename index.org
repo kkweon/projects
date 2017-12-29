@@ -6,6 +6,10 @@
 
 #+BEGIN_EXPORT html
 <style>
+img {
+  max-height: 30vh;
+  width: 50%;
+}
 @media (max-width: 600px) {
   div img {
     width: 90%;
