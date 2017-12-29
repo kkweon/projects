@@ -1,32 +1,22 @@
 #+SETUPFILE: ~/.spacemacs.d/org-themes/org-html-themes/setup/theme-bigblow.setup
 #+OPTIONS: html-postamble:nil
 
-#+TITLE: Kyung Mo Kweon's Projects
+#+TITLE: KYUNG MO KWEON
 #+AUTHOR: Kyung Mo Kweon
 
 #+BEGIN_EXPORT html
 <style>
-img {
-  width: 400px !important;
-  height: 300px !important;
-  margin: 0 auto !important;
+@media (max-width: 600px) {
+  div img {
+    width: 90%;
+  }
+  .buttons.dontprint,
+  #minitoc,
+  #left-panel-button {
+    display: none;
+  }
 }
 
-body {
-  font-size: 18px !important;
-}
-
-#left-panel-button {
-  display: none;
-}
-
-#content {
-  max-width: 60% !important;
-}
-div.snippet-copy-to-clipboard,
-span.copy-to-clipboard-button {
-  z-index: 999 !important;
-}
 </style>
 #+END_EXPORT
 
