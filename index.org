@@ -143,7 +143,6 @@ img {
 
 
 * Web
-
 ** Mango Commerce
 #+BEGIN_EXPORT html
 <img src="https://i.imgur.com/CK9bT4H.png" />
@@ -166,7 +165,6 @@ The objective is to read/discuss deep learning papers every week hosted in Aweso
 *** Link
 - [[https://kkweon.github.io/pr12/][Demo]]
 - [[https://github.com/kkweon/pr12][Github]]
-
 
 ** Hue Control Dashboard
 #+BEGIN_EXPORT html
@@ -263,6 +261,27 @@ N	⟼	November
 
 
 * Utils
+** CSS Autoprefix Plugin for Emacs
+*** Overview
+Turn this code
+#+BEGIN_SRC css
+  div {
+    display: flex;
+  }
+#+END_SRC
+
+into
+
+#+BEGIN_SRC css
+  div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+#+END_SRC
+*** Link
+- [[https://github.com/kkweon/emacs-css-autoprefixer][Github]]
+
 ** CalTrain Shuttle Bus Alexa Skill
 *** Overview
 - There is a shuttle bus from Broadway CalTrain Station to Millbrae CalTrain Station
@@ -303,7 +322,6 @@ N	⟼	November
 
 *** Link
 - [[https://github.com/kkweon/reddit-crawl-haskell.git][Github]]
-
 
 ** DeepLearningZeroToAll/ReinforcementZeroToAll
 
