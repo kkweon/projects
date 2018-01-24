@@ -6,9 +6,9 @@
 
 #+BEGIN_EXPORT html
 <style>
-img {
-  max-height: 30vh;
+div img {
   width: 50%;
+  text-align: center;
 }
 @media (max-width: 600px) {
   div img {
@@ -143,6 +143,16 @@ img {
 
 
 * Web
+** Landing Page
+ #+BEGIN_EXPORT html
+ <img src="assets/Mountain Travel.png" alt="Mountain Landing">
+ #+END_EXPORT
+
+*** Overview
+- Use Webpack, Pug, Sass
+*** Link
+- [[https://kkweon.gitlab.io/mountain-landing][Demo]]
+- [[https:gitlab.com/kkweon/mountain-landing][GitLab]]
 ** Mango Commerce
 #+BEGIN_EXPORT html
 <img src="https://i.imgur.com/CK9bT4H.png" />
