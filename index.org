@@ -36,7 +36,7 @@ div img {
 - Used Plain Hidden Markov Models and Ensembles
 
 *** Link
-- Github: [[https://nbviewer.jupyter.org/github/kkweon/AIND-Recognizer/blob/develop/asl_recognizer.ipynb][link]]
+- GitHub: [[https://nbviewer.jupyter.org/github/kkweon/AIND-Recognizer/blob/develop/asl_recognizer.ipynb][link]]
 
 ** Reinforcement Learning
 
@@ -62,7 +62,7 @@ div img {
 - Visualized monthly spending in comparison to the previous month
 
 *** Link
-- Github: [[https://github.com/kkweon/my-spending-report][link]]
+- GitHub: [[https://github.com/kkweon/my-spending-report][link]]
 
 
 * Self Driving Car
@@ -74,7 +74,7 @@ div img {
 - Segmented vehicles on a picture or a video frame with the IOU (Intersection of Union) of ~80%
 - Implemented the Convolutional Networks for Image Segmentation (U-Net) from scratch
 *** Link
-- [[https://github.com/kkweon/UNet-in-Tensorflow][Github]]
+- [[https://github.com/kkweon/UNet-in-Tensorflow][GitHub]]
 
 ** Path Planning
 #+BEGIN_EXPORT html
@@ -84,7 +84,7 @@ div img {
 - Generates a path plan that can drive on the highway
 - Implemented an efficient(lane change if necessary) and safe trajectory
 *** Link
-- [[https://github.com/kkweon/sdc-path-planning][Github]]
+- [[https://github.com/kkweon/sdc-path-planning][GitHub]]
 
 ** Vehicle Control with a Model Predictive Controller
 
@@ -96,7 +96,7 @@ div img {
 - Implemented a model predictive controller in the simulator
 - Used C++ and WebSocket to communicate with the simulator
 *** Link
-- Github: [[https://github.com/kkweon/CarND-MPC-Project][link]]
+- GitHub: [[https://github.com/kkweon/CarND-MPC-Project][link]]
 
 ** Vehicle Localization using Unscented Kalman Filter
 
@@ -110,7 +110,7 @@ div img {
 - Used googletest to follow the Test Driven Development (TDD)
 
 *** Link
-- Github: [[https://github.com/kkweon/unscented-kalman-filter-simulation/blob/master/README.org][link]]
+- GitHub: [[https://github.com/kkweon/unscented-kalman-filter-simulation/blob/master/README.org][link]]
 
 ** Traffic Sign Recognition
 #+BEGIN_EXPORT html
@@ -125,7 +125,7 @@ div img {
 
 
 *** Link
-- Github: [[https://github.com/kkweon/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup.md][link]]
+- GitHub: [[https://github.com/kkweon/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup.md][link]]
 
 ** Finding Driving Lanes
 #+BEGIN_EXPORT html
@@ -165,7 +165,7 @@ div img {
 
 *** Link
 - [[https://mango-commerce.herokuapp.com/][Demo]]
-- [[https://github.com/kkweon/Simple-App-in-Phoenix/tree/mango][Github]]
+- [[https://github.com/kkweon/Simple-App-in-Phoenix/tree/mango][GitHub]]
 
 ** PR-12
 *** Overview
@@ -174,7 +174,7 @@ The objective is to read/discuss deep learning papers every week hosted in Aweso
 
 *** Link
 - [[https://kkweon.github.io/pr12/][Demo]]
-- [[https://github.com/kkweon/pr12][Github]]
+- [[https://github.com/kkweon/pr12][GitHub]]
 
 ** Hue Control Dashboard
 #+BEGIN_EXPORT html
@@ -185,7 +185,7 @@ The objective is to read/discuss deep learning papers every week hosted in Aweso
 - Used Ajax, Webpack, Elm, ES6, CSS
 
 *** Link
-- [[https://github.com/kkweon/hue-control][Github]]
+- [[https://github.com/kkweon/hue-control][GitHub]]
 
 ** Nato Phonetic Convert
 *** Overview
@@ -208,7 +208,7 @@ N	⟼	November
 
 *** Link
 - [[https://kkweon.github.io/nato-phonetic-elm/][Demo]]
-- [[https://github.com/kkweon/nato-phonetic-elm][Github]]
+- [[https://github.com/kkweon/nato-phonetic-elm][GitHub]]
 
 ** Kaggle Clone
 #+BEGIN_EXPORT html
@@ -220,7 +220,7 @@ N	⟼	November
 
 *** Link
 - [[http://minikaggle.herokuapp.com/][Demo]]
-- [[https://github.com/kkweon/minikaggle-clone-django][Github]]
+- [[https://github.com/kkweon/minikaggle-clone-django][GitHub]]
 
 ** Price Alert
 #+BEGIN_EXPORT html
@@ -234,7 +234,7 @@ N	⟼	November
 
 *** Link
 - [[https://price-alert-flask.herokuapp.com/][Demo]]
-- [[https://github.com/kkweon/price_alert_flask][Github]]
+- [[https://github.com/kkweon/price_alert_flask][GitHub]]
 
 ** Question Asking Platform for Conference/Seminar
 #+BEGIN_EXPORT html
@@ -247,7 +247,7 @@ N	⟼	November
 - Written in Elm
 
 *** Link
-- [[https://github.com/kkweon/question-vote-realtime-elm][Github]]
+- [[https://github.com/kkweon/question-vote-realtime-elm][GitHub]]
 
 ** Simple Weather Ajax in Angular.js (v1)
 #+BEGIN_EXPORT html
@@ -259,14 +259,34 @@ N	⟼	November
 
 *** Link
 - [[https://kkweon.github.io/AngularJS1_Weather_SPA_Reference/#/][Demo]]
-- [[https://github.com/kkweon/AngularJS1_Weather_SPA_Reference][Github]]
+- [[https://github.com/kkweon/AngularJS1_Weather_SPA_Reference][GitHub]]
 
 ** Blog REST API
 *** Overview
 - Implemented RESTful Blog service through Django Rest Framework
 
 *** Link
-- [[https://github.com/kkweon/django-blog-rest][Github]]
+- [[https://github.com/kkweon/django-blog-rest][GitHub]]
+
+
+
+* Android/iOS
+
+** Employee Manager App
+#+BEGIN_EXPORT html
+<img src="https://gitlab.com/kkweon/TIL/raw/master/ReactNative/Manager/assets/manager.demo.gif" alt="Demo Image">
+#+END_EXPORT
+** Overview
+As a manager, I want to
+
+- add an employee
+- delete an employee
+- text an employee the work shift
+- edit the employee information
+
+** Link
+
+- [[https://gitlab.com/kkweon/TIL/tree/master/ReactNative/Manager][GitLab]]
 
 
 
@@ -290,7 +310,16 @@ into
   }
 #+END_SRC
 *** Link
-- [[https://github.com/kkweon/emacs-css-autoprefixer][Github]]
+- [[https://github.com/kkweon/emacs-css-autoprefixer][GitHub]]
+
+** Trello2Text
+
+
+*** Overview
+Export trello cards to text with Slack markdown format
+
+*** Link
+- [[https://github.com/kkweon/Trello2Text][GitHub]]
 
 ** CalTrain Shuttle Bus Alexa Skill
 *** Overview
@@ -300,7 +329,7 @@ into
 
 *** Link
 - [[https://www.amazon.com/Mo-Kweon-Millbrae-Broadway-ShuttleBus/dp/B076W9HTV8/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1509512577&sr=1-1&keywords=millbrae][Amazon]]
-- [[https://github.com/kkweon/caltrain-shuttle-bus-alexa-skill][Github]]
+- [[https://github.com/kkweon/caltrain-shuttle-bus-alexa-skill][GitHub]]
 
 ** Keras Docset for Dash/Zeal
 #+BEGIN_EXPORT html
@@ -311,7 +340,7 @@ into
 - Created a Keras docset for Zeal/Dash
 
 *** Link
-- [[https://github.com/kkweon/keras-docset][Github]]
+- [[https://github.com/kkweon/keras-docset][GitHub]]
 
 ** Identicon Generator
 #+BEGIN_EXPORT html
@@ -322,7 +351,7 @@ into
 - Used Elixir and Erlang library
 
 *** Link
-- [[https://github.com/kkweon/identicon-generator-in-elixir][Github]]
+- [[https://github.com/kkweon/identicon-generator-in-elixir][GitHub]]
 ** Reddit Crawler in Haskell
 
 *** Overview
@@ -331,7 +360,7 @@ into
 - Used Haskell, Stack, Docker
 
 *** Link
-- [[https://github.com/kkweon/reddit-crawl-haskell.git][Github]]
+- [[https://github.com/kkweon/reddit-crawl-haskell.git][GitHub]]
 
 ** DeepLearningZeroToAll/ReinforcementZeroToAll
 
