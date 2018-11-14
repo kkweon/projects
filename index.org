@@ -291,6 +291,32 @@ As a manager, I want to
 
 
 * Utils
+** sh2md
+*** Overview
+Record your shell session and produce in the markdown format
+
+
+#+BEGIN_EXPORT html
+<img src="https://github.com/kkweon/sh2md/blob/master/assets/demo.gif?raw=true">
+#+END_EXPORT
+
+*** Link
+- [[https://github.com/kkweon/sh2md][GitHub]]
+
+
+** Shell in Scala
+
+*** Overview
+
+Shell Implementation in Scala
+#+BEGIN_EXPORT html
+<img src="https://github.com/kkweon/scala-shell/blob/master/assets/demo.gif?raw=true">
+#+END_EXPORT
+
+*** Link
+
+- [[https://github.com/kkweon/scala-shell][GitHub]]
+
 ** CSS Autoprefix Plugin for Emacs
 *** Overview
 Turn this code
