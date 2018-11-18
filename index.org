@@ -1,4 +1,4 @@
-#+SETUPFILE: ~/.spacemacs.d/org-themes/org-html-themes/setup/theme-bigblow.setup
+#+SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/setup/theme-bigblow.setup
 #+OPTIONS: html-postamble:nil
 
 #+TITLE: KYUNG MO KWEON
@@ -303,7 +303,6 @@ Record your shell session and produce in the markdown format
 *** Link
 - [[https://github.com/kkweon/sh2md][GitHub]]
 
-
 ** Shell in Scala
 
 *** Overview
@@ -337,6 +336,18 @@ into
 #+END_SRC
 *** Link
 - [[https://github.com/kkweon/emacs-css-autoprefixer][GitHub]]
+
+** gbrowse
+*** Overview
+Open any git repository file in the browser in GitHub Respository
+
+#+BEGIN_SRC 
+gbrowse # open current branch in GitHub (e.g., https://github.com/kkweon/gbrowse/tree/master)
+gbrowse src/index.ts # (e.g., https://github.com/kkweon/gbrowse/tree/master/src/index.ts)
+#+END_SRC
+
+*** Link
+- [[https://github.com/kkweon/gbrowse][GitHub]]
 
 ** Trello2Text
 
