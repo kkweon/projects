@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package src.app.protos;
+
+message Project {
+  string title = 1;
+  string description = 2;
+  repeated string images = 3;
+  repeated ProjectLink links = 4;
+}
+
+message ProjectLink {
+  string name = 1;
+  string url = 2;
+}

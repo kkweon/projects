@@ -1,0 +1,33 @@
+protoc:
+  version: 3.11.0
+lint:
+  group: uber2
+
+  ignores:
+    - id: FILE_OPTIONS_REQUIRE_CSHARP_NAMESPACE
+      files:
+        - src/app/protos/project.proto
+    - id: FILE_OPTIONS_REQUIRE_GO_PACKAGE
+      files:
+        - src/app/protos/project.proto
+    - id: FILE_OPTIONS_REQUIRE_JAVA_MULTIPLE_FILES
+      files:
+        - src/app/protos/project.proto
+    - id: FILE_OPTIONS_REQUIRE_JAVA_OUTER_CLASSNAME
+      files:
+        - src/app/protos/project.proto
+    - id: FILE_OPTIONS_REQUIRE_JAVA_PACKAGE
+      files:
+        - src/app/protos/project.proto
+    - id: FILE_OPTIONS_REQUIRE_OBJC_CLASS_PREFIX
+      files:
+        - src/app/protos/project.proto
+    - id: FILE_OPTIONS_REQUIRE_PHP_NAMESPACE
+      files:
+        - src/app/protos/project.proto
+    - id: MESSAGES_HAVE_SENTENCE_COMMENTS_EXCEPT_REQUEST_RESPONSE_TYPES
+      files:
+        - src/app/protos/project.proto
+    - id: PACKAGE_MAJOR_BETA_VERSIONED
+      files:
+        - src/app/protos/project.proto
