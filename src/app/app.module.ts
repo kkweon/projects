@@ -6,15 +6,9 @@ import { ListProjectComponent } from './list-project/list-project.component';
 import { ListProjectItemComponent } from './list-project-item/list-project-item.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ListProjectComponent,
-    ListProjectItemComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, ListProjectComponent, ListProjectItemComponent],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

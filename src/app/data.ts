@@ -1,5 +1,5 @@
-import {LinkImpl, Project, ProjectImpl} from 'src/app/data.model';
-import {ProjectCategory} from './project-category.enum';
+import { LinkImpl, Project, ProjectImpl } from 'src/app/data.model';
+import { ProjectCategory } from './project-category.enum';
 
 const GitHub = 'GitHub';
 export const projects: Project[] = [
@@ -10,9 +10,13 @@ export const projects: Project[] = [
 <li>Used Plain Hidden Markov Models and Ensembles</li>
     </ul>`,
 
-
     'https://www-i6.informatik.rwth-aachen.de/~dreuw/database/rwth-boston-104/overview/images/orig/098-start.jpg',
-    [new LinkImpl(GitHub, 'https://nbviewer.jupyter.org/github/kkweon/AIND-Recognizer/blob/develop/asl_recognizer.ipynb')],
-    'American Sign Language Recognition with HMM'
+    [
+      new LinkImpl(
+        GitHub,
+        'https://nbviewer.jupyter.org/github/kkweon/AIND-Recognizer/blob/develop/asl_recognizer.ipynb',
+      ),
+    ],
+    'American Sign Language Recognition with HMM',
   ),
 ];

@@ -1,4 +1,4 @@
-import {ProjectCategory} from './project-category.enum';
+import { ProjectCategory } from './project-category.enum';
 
 export interface Project {
   category: ProjectCategory;
@@ -14,12 +14,15 @@ export interface Link {
 }
 
 export class LinkImpl implements Link {
-  constructor(public name: string, public url: string) {
-  }
+  constructor(public name: string, public url: string) {}
 }
 
 export class ProjectImpl implements Project {
-  constructor(public category: ProjectCategory, public content: string, public image: string, public links: [Link], public title: string) {
-  }
+  constructor(
+    public category: ProjectCategory,
+    public content: string,
+    public image: string,
+    public links: [Link],
+    public title: string,
+  ) {}
 }
-

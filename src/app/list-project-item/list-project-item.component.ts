@@ -1,20 +1,17 @@
-import {Component, Input, OnInit, SecurityContext} from '@angular/core';
-import {Project} from '../data.model';
-import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import { Component, Input, OnInit, SecurityContext } from '@angular/core';
+import { Project } from '../data.model';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-list-project-item',
   templateUrl: './list-project-item.component.html',
-  styleUrls: ['./list-project-item.component.scss']
+  styleUrls: ['./list-project-item.component.scss'],
 })
 export class ListProjectItemComponent implements OnInit {
-
   @Input()
   project: Project;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }
