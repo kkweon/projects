@@ -31,3 +31,11 @@ lint:
     - id: PACKAGE_MAJOR_BETA_VERSIONED
       files:
         - src/app/protos/project.proto
+
+generate:
+  plugins:
+    - name: js
+      flags: import_style=commonjs,binary
+      output: .
+    - name: ts
+      output: .
