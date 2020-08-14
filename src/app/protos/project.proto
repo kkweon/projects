@@ -7,9 +7,22 @@ message Project {
   string description = 2;
   repeated string images = 3;
   repeated ProjectLink links = 4;
+  ProjectCategory category = 5;
 }
 
 message ProjectLink {
   string name = 1;
   string url = 2;
+}
+
+
+// ProjectCategory represents a type of a project.
+enum ProjectCategory {
+  PROJECT_CATEGORY_INVALID = 0;
+  PROJECT_CATEGORY_ML = 1;
+  PROJECT_CATEGORY_ETC = 2;
+  PROJECT_CATEGORY_SELF_DRIVING_CAR = 3;
+  PROJECT_CATEGORY_WEB = 4;
+  PROJECT_CATEGORY_MOBILE = 5;
+  PROJECT_CATEGORY_UTIL = 6;
 }

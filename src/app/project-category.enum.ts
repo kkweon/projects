@@ -1,8 +1,0 @@
-export enum ProjectCategory {
-  MACHINE_LEARNING,
-  REINFORCEMENT_LEARNING,
-  SELF_DRIVING_CAR,
-  WEB,
-  MOBILE,
-  UTIL,
-}

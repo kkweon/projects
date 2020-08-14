@@ -1,5 +1,7 @@
 <p>list-project-item works!</p>
-
-<h2>{{ project.category }}</h2>
-<h2>{{ project.title }}</h2>
-<div [innerHTML]="project.content"></div>
+<ng-container *ngFor="let image of project.getImagesList()">
+  <img [src]="image" [alt]="project.getTitle()" />
+</ng-container>
+<h2>{{ getCategory() }}</h2>
+<h2>{{ project.getTitle() }}</h2>
+<div>{{ project.getDescription() }}</div>
