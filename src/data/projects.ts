@@ -12,9 +12,9 @@ export const projects: Project[] = [
       'Used Plain Hidden Markov Models and Ensembles',
     ],
     image: {
-      url: 'https://www-i6.informatik.rwth-aachen.de/~dreuw/database/rwth-boston-104/overview/images/orig/098-start.jpg',
+      url: '/images/generated/asl-recognition.svg',
       alt: 'American Sign Language Recognition',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {
@@ -293,9 +293,9 @@ export const projects: Project[] = [
       'Read and discuss deep learning papers every week',
     ],
     image: {
-      url: 'https://via.placeholder.com/600x400/667eea/ffffff?text=PR-12',
+      url: '/images/generated/pr12.svg',
       alt: 'PR-12 Deep Learning Papers',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {
@@ -343,9 +343,9 @@ export const projects: Project[] = [
       'Used Elm, CSS',
     ],
     image: {
-      url: 'https://via.placeholder.com/600x400/f093fb/ffffff?text=NATO+Phonetic',
+      url: '/images/generated/nato-phonetic.svg',
       alt: 'NATO Phonetic Converter',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {
@@ -474,9 +474,9 @@ export const projects: Project[] = [
       'Implemented RESTful Blog service through Django Rest Framework',
     ],
     image: {
-      url: 'https://via.placeholder.com/600x400/4ade80/ffffff?text=Blog+REST+API',
+      url: '/images/generated/blog-rest-api.svg',
       alt: 'Blog REST API',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {
@@ -565,9 +565,9 @@ export const projects: Project[] = [
       'Emacs plugin for web development',
     ],
     image: {
-      url: 'https://via.placeholder.com/600x400/fb923c/ffffff?text=CSS+Autoprefixer',
+      url: '/images/generated/css-autoprefixer.svg',
       alt: 'CSS Autoprefixer',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {
@@ -587,9 +587,9 @@ export const projects: Project[] = [
       'Command line tool for quick navigation',
     ],
     image: {
-      url: 'https://via.placeholder.com/600x400/38bdf8/ffffff?text=gbrowse',
+      url: '/images/generated/gbrowse.svg',
       alt: 'gbrowse',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {
@@ -608,9 +608,9 @@ export const projects: Project[] = [
       'Export trello cards to text with Slack markdown format',
     ],
     image: {
-      url: 'https://via.placeholder.com/600x400/c084fc/ffffff?text=Trello2Text',
+      url: '/images/generated/trello2text.svg',
       alt: 'Trello2Text',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {
@@ -631,9 +631,9 @@ export const projects: Project[] = [
       'Used Node.js, AWS Serverless Lambda, Mocha, TDD',
     ],
     image: {
-      url: 'https://via.placeholder.com/600x400/f472b6/ffffff?text=Alexa+Skill',
+      url: '/images/generated/caltrain-alexa.svg',
       alt: 'CalTrain Alexa Skill',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {
@@ -704,9 +704,9 @@ export const projects: Project[] = [
       'Used Haskell, Stack, Docker',
     ],
     image: {
-      url: 'https://via.placeholder.com/600x400/a78bfa/ffffff?text=Reddit+Crawler',
+      url: '/images/generated/reddit-crawler.svg',
       alt: 'Reddit Crawler',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {
@@ -726,9 +726,9 @@ export const projects: Project[] = [
       'Maintainer for both repositories',
     ],
     image: {
-      url: 'https://via.placeholder.com/600x400/818cf8/ffffff?text=DL+%26+RL+ZeroToAll',
+      url: '/images/generated/deeplearning-zero-to-all.svg',
       alt: 'DeepLearning and Reinforcement Learning Zero to All',
-      isLocal: false,
+      isLocal: true,
     },
     links: [
       {

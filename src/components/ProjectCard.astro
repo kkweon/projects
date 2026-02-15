@@ -14,9 +14,7 @@ const categoryClass = project.category
   .replace(/\//g, '-');
 
 // Determine if image is external or local
-const imageSrc = project.image.isLocal
-  ? `/portfolio${project.image.url}`
-  : project.image.url;
+const imageSrc = project.image.url;
 ---
 
 <article class="project-card reveal-stagger">
