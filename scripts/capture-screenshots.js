@@ -2,8 +2,11 @@ import { chromium } from 'playwright';
 import fs from 'fs';
 import path from 'path';
 
+// Hardcoding base path for simplicity as reading ESM config in this context can be tricky
+// without more dependencies or dynamic imports.
+const BASE_PATH = '/portfolio';
 const PORT = process.env.PORT || 4321;
-const BASE_URL = `http://localhost:${PORT}`;
+const BASE_URL = `http://localhost:${PORT}${BASE_PATH}`;
 const OUTPUT_DIR = '__screenshots__';
 
 async function captureScreenshots() {
@@ -20,7 +23,8 @@ async function captureScreenshots() {
   try {
     // Navigate to the page
     console.log(`Navigating to ${BASE_URL}...`);
-    await page.goto(BASE_URL, { waitUntil: 'networkidle' });
+    // Increase timeout for initial load
+    await page.goto(BASE_URL, { waitUntil: 'networkidle', timeout: 60000 });
 
     // Desktop View
     console.log('Capturing Desktop View...');
