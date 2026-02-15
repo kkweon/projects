@@ -1,0 +1,132 @@
+---
+import type { Category } from '../types/project';
+
+const categories: (Category | 'All')[] = [
+  'All',
+  'Machine Learning',
+  'Self Driving Car',
+  'Web',
+  'Android/iOS',
+  'Utils',
+];
+---
+
+<div class="category-filter">
+  <div class="container">
+    <h2 class="filter-title">Projects</h2>
+    <div class="filter-buttons" id="category-filter">
+      {
+        categories.map((category) => (
+          <button
+            class={`filter-btn ${category === 'All' ? 'active' : ''}`}
+            data-category={category}
+          >
+            {category}
+          </button>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<script>
+  // Client-side filtering logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+
+        // Update active button
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Filter projects
+        projectCards.forEach((card) => {
+          const cardCategory =
+            card.querySelector('.badge')?.textContent?.trim();
+
+          if (category === 'All' || cardCategory === category) {
+            card.style.display = '';
+            card.classList.add('reveal-stagger', 'active');
+          } else {
+            card.style.display = 'none';
+            card.classList.remove('active');
+          }
+        });
+
+        // Re-trigger stagger animation
+        const visibleCards = Array.from(projectCards).filter(
+          (card) => (card as HTMLElement).style.display !== 'none'
+        );
+
+        visibleCards.forEach((card, index) => {
+          (card as HTMLElement).style.transitionDelay = `${index * 100}ms`;
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .category-filter {
+    padding: var(--space-12) 0;
+    background-color: var(--color-surface);
+  }
+
+  .filter-title {
+    text-align: center;
+    font-size: var(--text-4xl);
+    font-weight: var(--font-extrabold);
+    margin-bottom: var(--space-8);
+    color: var(--color-text);
+  }
+
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .filter-btn {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    background-color: var(--color-bg);
+    color: var(--color-text-secondary);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--color-primary-light);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .filter-btn.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .filter-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  }
+
+  @media (max-width: 640px) {
+    .filter-btn {
+      padding: var(--space-2) var(--space-4);
+      font-size: var(--text-xs);
+    }
+  }
+</style>

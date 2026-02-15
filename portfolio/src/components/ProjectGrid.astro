@@ -1,0 +1,66 @@
+---
+import type { Project } from '../types/project';
+import ProjectCard from './ProjectCard.astro';
+
+export interface Props {
+  projects: Project[];
+  category?: string;
+}
+
+const { projects, category } = Astro.props;
+
+// Filter projects by category if specified
+const filteredProjects =
+  category && category !== 'All'
+    ? projects.filter((p) => p.category === category)
+    : projects;
+---
+
+<div class="project-grid-container">
+  {
+    filteredProjects.length > 0 ? (
+      <div class="project-grid grid grid-cols-1 grid-cols-sm-2 grid-cols-lg-3">
+        {filteredProjects.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <p>No projects found in this category.</p>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .project-grid-container {
+    width: 100%;
+  }
+
+  .project-grid {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  @media (min-width: 640px) {
+    .project-grid {
+      gap: var(--space-6);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .project-grid {
+      gap: var(--space-8);
+    }
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: var(--space-16) var(--space-4);
+  }
+
+  .empty-state p {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+  }
+</style>
