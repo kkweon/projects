@@ -49,10 +49,10 @@ const categories: (Category | 'All')[] = [
             card.querySelector('.badge')?.textContent?.trim();
 
           if (category === 'All' || cardCategory === category) {
-            card.style.display = '';
+            (card as HTMLElement).style.display = '';
             card.classList.add('reveal-stagger', 'active');
           } else {
-            card.style.display = 'none';
+            (card as HTMLElement).style.display = 'none';
             card.classList.remove('active');
           }
         });
