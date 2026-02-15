@@ -101,7 +101,43 @@ To add a new project, edit `src/data/projects.ts`:
 
 ## 🚢 Deployment
 
-The site is configured to deploy to GitHub Pages. Push to the main branch to trigger automatic deployment via GitHub Actions.
+### GitHub Pages (Automated)
+
+The site is configured to deploy automatically to GitHub Pages using GitHub Actions.
+
+**Setup:**
+
+1. Go to your repository Settings → Pages
+2. Under "Build and deployment", select:
+   - **Source**: GitHub Actions
+3. Push to the `main` or `master` branch to trigger deployment
+
+The workflow will:
+- Install dependencies
+- Build the Astro site
+- Deploy to GitHub Pages
+- Site will be available at `https://kkweon.github.io/portfolio`
+
+**Manual Deployment:**
+
+You can also trigger deployment manually:
+1. Go to Actions tab in GitHub
+2. Select "Deploy to GitHub Pages" workflow
+3. Click "Run workflow"
+
+### Other Platforms
+
+**Vercel:**
+```bash
+npm install -g vercel
+vercel --prod
+```
+
+**Netlify:**
+```bash
+npm install -g netlify-cli
+netlify deploy --prod
+```
 
 ## 📄 License
 
