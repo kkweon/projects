@@ -1,0 +1,120 @@
+name: PR Screenshots
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Build site
+        run: npm run build
+
+      - name: Start Preview Server
+        run: npm run preview -- --port 4321 &
+
+      - name: Wait for server
+        run: |
+          echo "Waiting for server to start..."
+          sleep 15
+
+      - name: Generate Screenshots
+        run: node scripts/capture-screenshots.js
+        env:
+          PORT: 4321
+
+      - name: Upload Screenshots to Branch
+        id: upload
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Configure git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Clone the screenshots branch into a temporary directory
+          # If it doesn't exist, create a new empty repo/branch structure
+          git clone --branch screenshots https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} screenshots-repo || \
+          (mkdir screenshots-repo && cd screenshots-repo && git init && git checkout -b screenshots && git commit --allow-empty -m "init")
+
+          cd screenshots-repo
+
+          # Create directory for this PR
+          mkdir -p pr-${{ github.event.number }}
+
+          # Copy images
+          cp ../__screenshots__/*.png pr-${{ github.event.number }}/
+
+          # Add and commit
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to screenshots."
+          else
+            git commit -m "Update screenshots for PR #${{ github.event.number }}"
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} screenshots
+          fi
+
+      - name: Post Comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const timestamp = Date.now();
+            const baseUrl = `https://raw.githubusercontent.com/${owner}/${repo}/screenshots/pr-${prNumber}`;
+
+            const body = `### 📸 Automated Screenshots
+
+            | Mobile (375x667) | Desktop (1920x1080) |
+            |:---:|:---:|
+            | ![Mobile](${baseUrl}/mobile.png?t=${timestamp}) | ![Desktop](${baseUrl}/desktop.png?t=${timestamp}) |
+            `;
+
+            // Find existing comment by the bot
+            const { data: comments } = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number: prNumber,
+            });
+
+            const botComment = comments.find(comment =>
+              comment.user.type === 'Bot' &&
+              comment.body.includes('### 📸 Automated Screenshots')
+            );
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: botComment.id,
+                body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: prNumber,
+                body
+              });
+            }
