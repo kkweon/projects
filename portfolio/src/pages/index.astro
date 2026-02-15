@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import CategoryFilter from '../components/CategoryFilter.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import Footer from '../components/Footer.astro';
+import { projects } from '../data/projects';
+---
+
+<BaseLayout
+  title="Kyung Mo Kweon - Portfolio"
+  description="Portfolio of Kyung Mo Kweon showcasing Machine Learning, Self-Driving Car, and Web Development projects"
+>
+  <Header />
+  <Hero />
+
+  <main id="projects" class="section">
+    <CategoryFilter />
+    <div class="container">
+      <div class="projects-container">
+        <ProjectGrid projects={projects} />
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+
+  <!-- Scroll reveal script -->
+  <script>
+    // Intersection Observer for scroll animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      revealElements.forEach((element) => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</BaseLayout>
+
+<style>
+  .projects-container {
+    margin-top: var(--space-12);
+  }
+
+  @media (min-width: 768px) {
+    .projects-container {
+      margin-top: var(--space-16);
+    }
+  }
+</style>
