@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main, master]
+  pull_request:
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -21,7 +23,18 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.check-deploy.outputs.should_deploy }}
     steps:
+      - name: Check if should deploy
+        id: check-deploy
+        run: |
+          if [[ "${{ github.event_name }}" == "push" ]] && [[ "${{ github.ref }}" == "refs/heads/main" || "${{ github.ref }}" == "refs/heads/master" ]]; then
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_deploy=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -58,6 +71,10 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
 
+      - name: Run type checking
+        run: ${{ steps.detect-package-manager.outputs.runner }} astro check
+        working-directory: ${{ env.BUILD_PATH }}
+
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
@@ -69,6 +86,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.BUILD_PATH }}/dist
+        if: steps.check-deploy.outputs.should_deploy == 'true'
 
   deploy:
     environment:
@@ -77,6 +95,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
+    if: needs.build.outputs.should_deploy == 'true'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
