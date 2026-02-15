@@ -4,3 +4,4 @@ node_modules
 # Astro
 dist/
 .astro/
+__screenshots__
