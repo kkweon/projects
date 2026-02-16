@@ -33,7 +33,7 @@ const currentYear = new Date().getFullYear();
           href="#top"
           class="footer-link back-to-top"
           aria-label="Back to top"
-          onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});"
+          onclick="(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }"
         >
           <svg
             width="20"
